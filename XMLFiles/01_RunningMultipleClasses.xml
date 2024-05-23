@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="CW TestNG">
+
+    <test name="DependsOnTest Test">
+
+        <classes>
+            <class name="clarusway.tests.C08_DependsOnTest"></class>
+        </classes>
+
+    </test>
+
+    <test name="HardAndSoftAssertion">
+
+        <classes>
+
+            <class name="clarusway.tests.C02_Priority"></class>
+            <class name="clarusway.tests.C10_HardAndSoftAssertion"></class>
+
+        </classes>
+
+
+    </test>
+
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
