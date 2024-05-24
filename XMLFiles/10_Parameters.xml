@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="ParameterizedTest">
+
+        <!--Test class'ın kullanılacak parametre burada belirtilir.-->
+        <parameter name="name" value="John"></parameter>
+        <parameter name="lastname" value="Harry"></parameter>
+        <parameter name="age" value="45"></parameter>
+
+        <classes>
+            <class name="clarusway.tests.C12_ParameterizedTest"></class>
+        </classes>
+    </test>
+</suite>

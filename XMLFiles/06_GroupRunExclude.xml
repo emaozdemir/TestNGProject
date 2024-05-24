@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group Run">
+
+    <test verbose="2" preserve-order="true" name="XMLFileGroupRun">
+
+        <groups>
+            <run>
+                <exclude name="Group B"></exclude><!--exclude diyerek hariç tutulacak gruplar belitilir. Bu grup dışındaki tüm testler çalışır(Sadece gruplar değil)-->
+            </run>
+        </groups>
+
+<!--        <classes>-->
+<!--            <class name="clarusway.tests.C11_XMLFileGroupRun"></class>-->
+<!--        </classes>-->
+
+        <packages>
+            <package name="clarusway.tests"></package>
+        </packages>
+
+    </test>
+</suite>

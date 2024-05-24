@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group Run">
+
+    <test verbose="2" preserve-order="true" name="XMLFileGroupRun">
+
+        <groups>
+            <run>
+                <include name="Group C"></include><!--Include diyerek çalışacak gruplar belitilir.-->
+                <include name="B"></include><!--Include diyerek çalışacak gruplar belitilir.-->
+            </run>
+        </groups>
+
+        <packages>
+            <package name="clarusway.tests"></package> <!--Çalışacak grubun içinde bulunduğu class yada package burada belirtilir.-->
+        </packages>
+ 
+    </test>
+</suite>

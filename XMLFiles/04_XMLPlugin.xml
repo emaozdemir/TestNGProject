@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true" name="Description">
+        <classes>
+            <class name="clarusway.tests.C06_Description">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Groups">
+        <classes>
+            <class name="clarusway.tests.C07_Groups">
+                <methods>
+                    <include name="dependsOnGroupTest"/>
+                    <include name="dependsOnGroupATest"/>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                    <include name="test05"/>
+                    <include name="test06"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

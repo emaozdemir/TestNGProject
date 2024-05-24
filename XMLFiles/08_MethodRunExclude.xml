@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Method Run">
+    <test verbose="2" preserve-order="true" name="Method Run Exclude">
+        <classes>
+            <class name="clarusway.tests.C11_XMLFileGroupRun">
+                <methods>
+                    <!--Hariç tutulacak olan methodlar buraya belirtilir.-->
+                    <exclude name="test08"/>
+                    <exclude name="test07"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
