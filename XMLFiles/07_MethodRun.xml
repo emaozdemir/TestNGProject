@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Method Run">
+    <test verbose="2" preserve-order="true" name="Method Run">
+        <classes>
+            <class name="clarusway.tests.C11_XMLFileGroupRun">
+                <methods>
+                    <!--Çalıştırılacak olan methodlar buraya belirtilir.-->
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test07"/>
+                    <include name="test08"/>
+                    <include name="test09"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

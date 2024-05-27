@@ -17,14 +17,14 @@ public abstract class TestBase {//Classı abstract yaparak bu classtan obje olu�
     protected WebDriver driver;
 
 
-    @BeforeClass//Her @Test methodu öncesi çalışır.
+    @BeforeClass
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//Web elementin yüklenip bulunması için 10 saniyeye kadar bekler. NoSuchElementException atar.
     }
 
-    @AfterClass//Her @Test methodu sonrası çalışır.
+    @AfterClass
     public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
