@@ -20,7 +20,7 @@ public class DataProviderUtils {
         return arr;
     }
 
-    @DataProvider
+    @DataProvider//Bu method faker'dan aldığı datayı iki boyutlu array olarak döner ve data provider ile test classında kullanılır.
     public String[][] usernamePasswordFaker() {
 
         Faker faker = new Faker();
@@ -38,10 +38,18 @@ public class DataProviderUtils {
         return arr;
     }
 
-    @DataProvider
+    @DataProvider//Bu method excel datasını 2 boyutlu array'e çevirir ve  data provider ile test classında kullanılır.
     public String[][] excelData() {
 
         ExcelUtils excelUtils = new ExcelUtils("resources/username_password.xlsx", "Sheet1");
+
+        return excelUtils.getDataArrayWithoutFirstRow();
+    }
+
+    @DataProvider
+    public String[][] registerData() {
+
+        ExcelUtils excelUtils = new ExcelUtils("resources/username_password.xlsx", "Sheet3");
 
         return excelUtils.getDataArrayWithoutFirstRow();
     }

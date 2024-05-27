@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true" name="CrossBrowserTest 1">
+
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="clarusway.tests.C18_CrossBrowserTest"></class>
+        </classes>
+
+    </test>
+
+    <test verbose="2" preserve-order="true" name="CrossBrowserTest 2">
+
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="clarusway.tests.C18_CrossBrowserTest"></class>
+        </classes>
+
+    </test>
+
+    <test verbose="2" preserve-order="true" name="CrossBrowserTest 3">
+
+        <classes>
+            <class name="clarusway.tests.C18_CrossBrowserTest"></class>
+        </classes>
+
+    </test>
+
+
+</suite>
