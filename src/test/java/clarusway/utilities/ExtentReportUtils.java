@@ -80,6 +80,12 @@ public class ExtentReportUtils extends TestBase {
                 .log(Status.PASS, message)
                 .addScreenCaptureFromPath(takeScreenshot());
     }
+    //    Bu metod log oluşturur VE ekran görüntüsü alır VE bunları html raporuna ekler
+    public static void failAndCaptureScreenshot(String message) {
+        extentTest
+                .log(Status.FAIL, message)
+                .addScreenCaptureFromPath(takeScreenshot());
+    }
 
     /*
     RAPORU OLUŞTURMAK İÇİN EN SONDA FLUSH KULLANILMALIDIR
@@ -106,4 +112,5 @@ public class ExtentReportUtils extends TestBase {
         // 4. Resim yolunu String olarak dön
         return path;
     }
+
 }

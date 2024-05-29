@@ -10,7 +10,8 @@
     <test verbose="2" preserve-order="true"  name="ListenersTestXML">
 
         <classes>
-            <class name="clarusway.tests.C26_ListenersTestXML"></class>
+            <class name="clarusway.tests.C27_ListenersFailTest"></class>
+            <class name="clarusway.tests.C28_ListenersPassTest"></class>
         </classes>
     </test>
 </suite>
