@@ -49,7 +49,62 @@
             <version>5.2.4</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.25.0</version>
+        </dependency>
+
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <!-- Configure parallel test execution -->
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+
+
+                    <!--Spesifik olarak çalıştırılmak istenen XML dosyası -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>XMLFiles/13_ParallelTest.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+
+                    <!--Spesifik olarak çalıştırılmak istenen Class-->
+                    <!--                                        <includes>-->
+                    <!--                                            <include>clarusway/tests/C19_ParallelTest.java</include>-->
+                    <!--                                        </includes>-->
+
+                </configuration>
+
+
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

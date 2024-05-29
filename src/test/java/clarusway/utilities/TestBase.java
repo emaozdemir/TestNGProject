@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public abstract class TestBase {//Classı abstract yaparak bu classtan obje oluşturulmasını engelliyoruz.
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
 
     @BeforeClass

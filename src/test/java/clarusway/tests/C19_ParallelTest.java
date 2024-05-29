@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class C19_ParallelTest {
 
     @Test
-    void test01(){
+    void test01() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
         assert driver.getTitle().contains("Google");
@@ -15,7 +15,7 @@ public class C19_ParallelTest {
     }
 
     @Test
-    void test02(){
+    void test02() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://linkedin.com");
         assert driver.getTitle().contains("LinkedIn");
@@ -23,7 +23,7 @@ public class C19_ParallelTest {
     }
 
     @Test
-    void test03(){
+    void test03() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://clarusway.com");
         assert driver.getTitle().contains("Bootcamp");
@@ -31,7 +31,7 @@ public class C19_ParallelTest {
     }
 
     @Test
-    void test04(){
+    void test04() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://facebook.com");
         assert driver.getTitle().contains("Facebook");
@@ -39,7 +39,7 @@ public class C19_ParallelTest {
     }
 
     @Test
-    void test05(){
+    void test05() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://instagram.com");
         assert driver.getTitle().contains("Instagram");

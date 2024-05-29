@@ -1,38 +1,17 @@
 package clarusway.tests;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class C21_ParallelTestWithParameters {
 
-    @Test
-    public void test01() {
-        System.out.println("Thread ID: "+Thread.currentThread().threadId());
-        System.out.println("Test 01");
+    @Test(threadPoolSize = 3, invocationCount = 9)
+    void test01() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://google.com");
+        assert driver.getTitle().contains("Google");
+        driver.quit();
     }
-
-    @Test
-    public void test02() {
-        System.out.println("Thread ID: "+Thread.currentThread().threadId());
-        System.out.println("Test 02");
-    }
-
-    @Test
-    public void test03() {
-        System.out.println("Thread ID: "+Thread.currentThread().threadId());
-        System.out.println("Test 03");
-    }
-
-    @Test
-    public void test04() {
-        System.out.println("Thread ID: "+Thread.currentThread().threadId());
-        System.out.println("Test 04");
-    }
-
-    @Test
-    public void test05() {
-        System.out.println("Thread ID: "+Thread.currentThread().threadId());
-        System.out.println("Test 03");
-    }
-
 
 }
