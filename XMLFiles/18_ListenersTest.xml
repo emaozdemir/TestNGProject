@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="clarusway.utilities.ListenersUtils"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"  name="ListenersTestXML">
+
+        <classes>
+            <class name="clarusway.tests.C26_ListenersTestXML"></class>
+        </classes>
+    </test>
+</suite>

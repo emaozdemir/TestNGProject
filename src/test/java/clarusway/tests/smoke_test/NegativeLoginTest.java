@@ -26,7 +26,7 @@ public class NegativeLoginTest extends TestBase {
         ExtentReportUtils.passAndCaptureScreenshot("user entered password");
         driver.findElement(By.id("submit")).click();
         ExtentReportUtils.pass("user clicked on submit");
-        Thread.sleep(200);
+        Thread.sleep(200);//yerine implicity yapabiliriz
 
         WebElement negatifMessage = driver.findElement(By.id("error"));
         assertTrue(negatifMessage.isDisplayed());
