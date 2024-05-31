@@ -37,6 +37,24 @@ public class DataProviderUtils {
 
         return arr;
     }
+    @DataProvider()//Bu method faker'dan aldığı datayı iki boyutlu array olarak döner ve data provider ile test classında kullanılır.
+    public String[][] usernamePasswordFaker2() {
+
+        Faker faker = new Faker();
+
+        String[][] arr = {
+
+                {faker.name().firstName(),faker.name().lastName(),faker.internet().emailAddress(), faker.internet().password()},
+                {faker.name().firstName(),faker.name().lastName(),faker.internet().emailAddress(), faker.internet().password()},
+                {faker.name().firstName(),faker.name().lastName(),faker.internet().emailAddress(), faker.internet().password()},
+                {faker.name().firstName(),faker.name().lastName(),faker.internet().emailAddress(), faker.internet().password()},
+                {faker.name().firstName(),faker.name().lastName(),faker.internet().emailAddress(), faker.internet().password()},
+
+
+        };
+
+        return arr;
+    }
 
     @DataProvider//Bu method excel datasını 2 boyutlu array'e çevirir ve  data provider ile test classında kullanılır.
     public String[][] excelData() {

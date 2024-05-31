@@ -37,7 +37,6 @@ public class ExtentReportUtils extends TestBase {
         extentReports.setSystemInfo("Test Ortamı", "Regresyon");
         extentReports.setSystemInfo("Tarayıcı", "Chrome");
         extentReports.setSystemInfo("Ekip Adı", "Kartallar");
-        extentReports.setSystemInfo("SQA", "John");
         extentReports.setSystemInfo("Özellik Numarası", "FE1056");
         extentReports.setSystemInfo("Şirket Adı", "Clarusway");
 
