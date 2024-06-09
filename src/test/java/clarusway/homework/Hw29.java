@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -46,11 +47,9 @@ mesajını görmek için düğmelere tıklayın! Allure raporlarını ve dinleyi
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> buttons = driver.findElements(By.xpath("//div[@id='buttons']/button"));
-
         for (WebElement button : buttons) {
             wait.until(ExpectedConditions.elementToBeClickable(button)).click();
         }
-
 
         WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("buttonmessage")));
         String message = messageElement.getText();

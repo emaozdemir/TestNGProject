@@ -35,11 +35,6 @@ public class Hw22 extends TestBase {
     //Create beforeClass and set up settings.
     //extends yaptım
 
-    //By creating interdependent tests;
-    //First go to Facebook.
-    //Then go to Google depending on Facebook,
-    //Then go to Clarusway depending on Google
 
-    //Close the driver.
 }
 
