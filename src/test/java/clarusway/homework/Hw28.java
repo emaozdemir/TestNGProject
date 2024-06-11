@@ -4,14 +4,11 @@ import clarusway.utilities.ExtentReportUtils;
 import clarusway.utilities.TestBase;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.List;
-import java.util.Set;
 
 import static clarusway.utilities.JavascriptUtils.clickElementByJS;
 
@@ -28,9 +25,13 @@ https:automationexercise.com adresine gidin.
     @Test
     void createAndDeleteAccount() throws InterruptedException {
         ExtentReportUtils.createTestReport("Create Account Test", "Happy Path");
+
         driver.get("https://automationexercise.com/");
+        driver.findElement(By.xpath("(//p[@class='fc-button-label'])[1]")).click();
         driver.findElement(By.xpath("//a[@href='/login']")).click();
+
         ExtentReportUtils.passAndCaptureScreenshot("User is on the homepage");
+
         driver.findElement(By.xpath("//input[@data-qa='signup-name']")).sendKeys(Faker.instance().name().username() + Keys.ENTER);
         driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys(Faker.instance().internet().emailAddress() + Keys.ENTER);
         ExtentReportUtils.passAndCaptureScreenshot("User is on the signup/login page");
@@ -62,26 +63,32 @@ https:automationexercise.com adresine gidin.
 
         driver.findElement(By.xpath("//input[@data-qa='state']")).sendKeys(Faker.instance().address().state() + Keys.ENTER);
         driver.findElement(By.xpath("//input[@data-qa='city']")).sendKeys(Faker.instance().address().city() + Keys.ENTER);
-        driver.findElement(By.xpath("//input[@data-qa='zipcode']")).sendKeys(Faker.instance().address().zipCode() + Keys.ENTER);
-        driver.findElement(By.xpath("//input[@data-qa='mobile_number']")).sendKeys(Faker.instance().phoneNumber().cellPhone() + Keys.ENTER);
+        driver.findElement(By.xpath("//input[@data-qa='zipcode']")).sendKeys(Faker.instance().address().zipCode());
+        driver.findElement(By.xpath("//input[@data-qa='mobile_number']")).sendKeys(Faker.instance().phoneNumber().cellPhone() );
+       driver.findElement(By.xpath("//button[@data-qa='create-account']")).click();
+
+
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
+
 //        WebElement createButton = driver.findElement(By.xpath("//button[@data-qa='create-account']"));
 //        clickElementByJS(createButton);
-        ExtentReportUtils.passAndCaptureScreenshot("User created account in successfully");
-        driver.findElement(By.linkText("Continue")).click();
+//        ExtentReportUtils.passAndCaptureScreenshot("User created account in successfully");
+//        driver.findElement(By.linkText("Continue")).click();
+
 
         driver.findElement(By.xpath("//a[@href='/delete_account']")).click();
-        driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
 
-        ExtentReportUtils.passAndCaptureScreenshot("Account deleted!!!");
-      //  ExtentReportUtils.createTestReport("Account has deleted","Create and delete task");
+
+        //   ExtentReportUtils.passAndCaptureScreenshot("Account deleted!!!");
+        //  ExtentReportUtils.createTestReport("Account has deleted","Create and delete task");
+
 
         driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
 
         ExtentReportUtils.flush();
 
     }
-
 
 
 }
