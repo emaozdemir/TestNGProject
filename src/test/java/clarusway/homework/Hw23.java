@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Collections.sort;
+import static org.testng.AssertJUnit.assertEquals;
 
 
 public class Hw23 extends TestBase {
@@ -37,8 +38,14 @@ public class Hw23 extends TestBase {
         }
 
 
-        List<WebElement> builtHeight =driver.findElements(By.xpath("//table[@class='tsc_table_s13']//tr//th[1]"));//yuksekliği istiyor ?
-        System.out.println(builtHeight.get(minIndex+2).getText());
+
+        System.out.println("idx = " + minIndex);
+
+        //En düşük yılın indeksindeki yüksekliği alalım:
+        String heightOfFirstBuiltTower = driver.findElements(By.xpath("(//tbody)[2]//td[3]")).get(minIndex).getText();
+        System.out.println("heightOfFirstBuiltTower = " + heightOfFirstBuiltTower);
+
+        assertEquals("509m", heightOfFirstBuiltTower);
 
 
 
@@ -56,3 +63,50 @@ public class Hw23 extends TestBase {
     }
 
 }
+
+/*
+    @Test
+    public void towerHeight() {
+
+        driver.get("https://www.techlistic.com/p/demo-selenium-practice.html");
+
+        //Yapılış yıllarını bir list içine alalım:
+        List<WebElement> years = driver.findElements(By.xpath("(//tbody)[2]//td[4]"));
+
+        //Minimum yılı hesplayalım:
+        int minYear = Integer.parseInt(years.getFirst().getText());
+
+        for (WebElement w : years) {
+
+            if (Integer.parseInt(w.getText()) < minYear) {
+                minYear = Integer.parseInt(w.getText());
+            }
+
+        }
+
+        System.out.println("minYear = " + minYear);
+
+        int idx = 0;
+
+        for (WebElement w : years) {
+
+            if (Integer.parseInt(w.getText()) == minYear) {
+                break;
+            }
+
+            idx++;
+        }
+
+        System.out.println("idx = " + idx);
+
+        //En düşük yılın indeksindeki yüksekliği alalım:
+        String heightOfFirstBuiltTower = driver.findElements(By.xpath("(//tbody)[2]//td[3]")).get(idx).getText();
+        System.out.println("heightOfFirstBuiltTower = " + heightOfFirstBuiltTower);
+
+        assertEquals("509m", heightOfFirstBuiltTower);
+
+
+    }
+
+}
+ */

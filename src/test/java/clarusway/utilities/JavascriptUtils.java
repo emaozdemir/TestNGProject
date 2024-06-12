@@ -56,6 +56,8 @@ public class JavascriptUtils extends TestBase {
         }
     }
 
+
+
     // Belirtilen mesaj ile bir JavaScript uyarısı oluşturur.
     public static void generateAlert(String message) {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) driver);
