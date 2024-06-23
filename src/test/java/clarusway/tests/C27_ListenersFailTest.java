@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class C27_ListenersFailTest extends TestBase {
+
+    //@Listeners tagi yok xmlden calıstırmamız lazım raporların olusması için
     @Test
     public void positiveLoginTest(){
 

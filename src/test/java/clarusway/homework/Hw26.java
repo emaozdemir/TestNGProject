@@ -37,8 +37,6 @@ public class Hw26 extends TestBase {
 
         driver.findElement(By.id("submit")).click();
 
-
-
         String logout = driver.findElement(By.id("logout")).getText();
         Thread.sleep(2000);
 //        assertEquals("Logout", logout);

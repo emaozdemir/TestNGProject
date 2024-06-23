@@ -12,7 +12,7 @@ import static org.testng.Assert.assertEquals;
 public class C22_DataProviderParallelTest {
     /*
     XML dosyası ile çalıştırırsak belirttiğimiz thread count sayısı çalışır.
-    Test class'ından çalıştırırsak Data provider iiçinde bulunan element sayısı kadar thread count çalışır.
+    Test class'ından çalıştırırsak Data provider içinde bulunan element sayısı kadar thread count çalışır.
      */
 
     @Test(dataProvider = "fakerParallel", dataProviderClass = DataProviderUtils.class)

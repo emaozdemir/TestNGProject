@@ -31,7 +31,7 @@ public class C20_ParallelTestThread {
     @Test
     public void test05() {
         System.out.println("Thread ID: "+Thread.currentThread().threadId());
-        System.out.println("Test 03");
+        System.out.println("Test 05");
     }
 
 

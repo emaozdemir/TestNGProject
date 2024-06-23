@@ -1,5 +1,7 @@
 package clarusway.tests;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -7,6 +9,7 @@ import org.testng.annotations.Test;
 public class C19_ParallelTest {
 
     @Test
+   // @Severity(SeverityLevel.CRITICAL)
     void test01() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");

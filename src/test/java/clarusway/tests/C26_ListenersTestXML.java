@@ -6,7 +6,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 //Listeners ve test classını bağlamanın İKİNCİ YOLU XMLLEDİR.
-//3.yol noteste ekran görüntüsü olarak bulunmakta .(run kısmında edit configirasyon)
+//3.yol run kısmında edit configirasyonda
 
 public class C26_ListenersTestXML {
     @Test

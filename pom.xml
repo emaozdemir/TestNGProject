@@ -87,6 +87,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
+
                     <!-- Configure parallel test execution -->
                     <parallel>methods</parallel>
                     <threadCount>2</threadCount>
@@ -94,16 +95,16 @@
 
 
                     <!--Spesifik olarak çalıştırılmak istenen XML dosyası -->
-                    <suiteXmlFiles>
-                        <suiteXmlFile>XMLFiles/13_ParallelTest.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+<!--                    <suiteXmlFiles>-->
+<!--                        <suiteXmlFile>XMLFiles/13_ParallelTest.xml</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
 
                     <!--                    alt ve üsttekinden hangisini calıstırcaksan bi tanesini kapatmalıyız-->
 
                     <!--Spesifik olarak çalıştırılmak istenen Class-->
-                    <!--                                        <includes>-->
-                    <!--                                            <include>clarusway/tests/C19_ParallelTest.java</include>-->
-                    <!--                                        </includes>-->
+                                                            <includes>
+                                                                <include>clarusway/tests/C19_ParallelTest.java</include>
+                                                            </includes>
 
                 </configuration>
 

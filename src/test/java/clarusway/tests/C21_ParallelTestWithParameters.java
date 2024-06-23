@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class C21_ParallelTestWithParameters {
 
-    @Test(threadPoolSize = 3, invocationCount = 9)
+    @Test(threadPoolSize = 3, invocationCount = 15)
     void test01() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
